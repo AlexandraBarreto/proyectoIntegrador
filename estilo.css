@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600;700&display=swap');
+*{
+    box-sizing: border-box;/* puede ser útil para mantener un mejor control sobre el diseño y el posicionamiento de los elementos en una página*/
+}
+body{
+    font-family: 'Rajdhani'; /*Establece la fuente de la familia de fuentes a utilizar para el texto dentro del <body>*/
+    background-attachment: fixed;/*Fija la posición de la imagen de fondo para que no se desplace al hacer scroll en la página.*/
+    background-image: url('imagen1.avif'); /*imagen de fondo*/
+    background-size: cover;/*Ajusta automáticamente el tamaño de la imagen de fondo para cubrir completamente el área del <body>*/
+
+}
+#pantalla-inicial{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;/*largo del cuado*/
+
+    display: block;
+    max-width: 700px;/*ancho del cuadro*/
+    margin: 125px auto; /*subir y bajar el cuadro*/
+    text-align: center;
+    background:rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border: 2px solid #000;
+    border-radius: 20px; 
+}
+#pantalla-inicial h1{
+    margin-bottom: 20px; /*mover boton*/
+    padding: 25px 80px; /*mover texto "subnet master"*/
+    font-family: 'Rammetto One';
+    font-size: 50px;
+    color:#4a68e0;
+    -webkit-text-stroke: 0.1px #000; /* Color y grosor del contorno */
+    
+      
+      
+
+}
+#game-over{
+    display: none;
+}
+#pantalla-juego{
+    display: none;
+}
+
+#pasar-nivel{
+    display: none;
+}
+
+#no-pasar-nivel{
+    display: none;
+}
+.container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 50px auto;
+    border: 2px solid #000;
+    border-radius: 50%;
+    background:rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container #tiempo{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    background: #fff;
+    color: #5972d9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.pregunta-actual{
+    background-color: #000;
+    color: #fff;
+}
+.bien-respondida{
+    background-color: #3edbbb;
+    color: #fff;
+}
+.mal-respondida{
+    background-color:#fb797b;
+    color: #fff;
+}
+
+.contendor-pregunta{
+    background:rgba(255, 255, 255, 0.7);
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+.contendor-pregunta #letra-pregunta{
+    border: 2px solid #000 ;
+    display: inline-block;
+    color: #000;
+    font-weight: bold;
+    padding: 5px 15px;
+    font-size: 30px;
+    position: relative;
+    bottom: 25px;
+    background-color: #fff;
+}
+.contendor-pregunta #pregunta{
+    margin: 0;
+    font-weight: normal;
+}
+.contendor-pregunta input{
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 25px;
+    padding: 10px;
+    text-align: center;
+    width: 60%;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    border: 2px solid #ccc;
+}
+.botones{
+    margin-bottom: 20px;
+}
+button{
+    background-color: #c466fc;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 0 20px;
+    border-radius: 30px;
+    border-bottom: 4px solid #4b0872 ;
+}
+button:hover{
+    border-bottom: 4px solid transparent;
+    background-color: #7705b9;
+}
+#pantalla-final{
+    display: none;
+    max-width: 325px;/*ancho*/
+    margin:10px; /*centrar cuadro*/
+    text-align: center;
+    background:rgba(131, 89, 222, 0.7);
+    padding: 12px;/*largo cuadro*/
+    border: 2px solid #000;
+    border-radius: 20px; 
+}
+#pantalla-final span{
+   
+    display: block;
+    background: #000;
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin:auto;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+#pasar-nivel {
+    display: none;
+    max-width: 325px;
+    margin:125px auto; /*centrar cuadro*/
+    margin-top: -200px; /*subir y bajar el cuadro*/
+    text-align: center;
+    background:rgba(191, 205, 215, 0.7);
+    padding: 30px;/*tamano del cuadro*/
+    border: 2px solid #000;
+    border-radius: 20px; 
+}
+#no-pasar-nivel{
+    display: none;
+    max-width: 325px;
+    margin:125px auto; /*centrar cuadro*/
+    margin-top: -200px; /*subir y bajar el cuadro*/
+    text-align: center;
+    background:rgba(191, 205, 215, 0.7);
+    padding: 30px;/*tamano del cuadro*/
+    border: 2px solid #000;
+    border-radius: 20px; 
+}
+#game-over{
+    
+    padding:500px ; /*mover texto ""*/
+    margin-top: -900px;
+    font-family: 'Rammetto One';
+    text-align: right;
+    font-size: 50px;
+    color:#4a68e0;
+    -webkit-text-stroke: 0.1px #000; /* Color y grosor del contorno */
+
+}
